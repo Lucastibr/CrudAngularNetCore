@@ -1,0 +1,29 @@
+
+<h1 class="text-center">Lista de Pessoas</h1>
+    <div class="container main-container">
+        <table class="table table-dark">
+          <thead>
+            <tr>
+              <th scope="col">ID</th>
+              <th scope="col">Nome</th>
+              <th scope="col">CPF</th>
+              <th scope="col">Data de nascimento</th>
+              <th scope="col">Unidade Federativa</th>
+              <th scope="colgroup">Opções</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let pessoa of pessoas">
+              <th scope="row">{{ pessoa.id }}</th>
+              <td>{{ pessoa.nome }}</td>
+              <td>{{ pessoa.cpf }}</td>
+              <td>{{ pessoa.dataNascimento | date:"MM/dd/yyyy"}}</td>
+              <td>{{ pessoa.uf }}</td>
+              <td>
+                <span class="editar btn btn-info" routerLink="/EditarPessoa/{{ pessoa.id }}">Editar</span> |
+                <span class="deletar btn btn-danger" (click)="ExcluirPessoas(pessoa.id)">Excluir</span>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>

@@ -1,0 +1,27 @@
+<div class="container custom-container">
+    <div class="col-md-12">
+      
+      <h3 class="mb-3 text-center">Editar Pessoa</h3>
+  
+      <div class="form-group">
+        <input type="text" [(ngModel)]="pessoadata.nome" class="form-control" placeholder="Nome">
+      </div>
+  
+      <div class="form-group">
+        <input type="text" [(ngModel)]="pessoadata.cpf" class="form-control" placeholder="CPF">
+      </div>
+  
+      <div class="form-group">
+        <input type="date" [(ngModel)]="pessoadata.dataNascimento" class="form-control" placeholder="Data de Nascimento">
+      </div>
+
+      <div class="form-group">
+        <input type="number" [(ngModel)]="pessoadata.uf" class="form-control" placeholder="Unidade Federativa">
+      </div>
+  
+      <div class="form-group">
+        <button class="btn btn-success btn-lg btn-block" (click)="AtualizarPessoa()">Atualizar essa pessoa</button>
+      </div>
+      
+    </div>
+  </div>
